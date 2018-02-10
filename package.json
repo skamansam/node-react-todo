@@ -4,6 +4,8 @@
   "description": "demo app for server side react",
   "main": "index.js",
   "scripts": {
+    "start": "http-server src/static",
+    "build": "NODE_ENV=production webpack -p",
     "test": "mocha test"
   },
   "repository": {
