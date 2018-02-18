@@ -4,7 +4,7 @@
   "description": "demo app for server side react",
   "main": "index.js",
   "scripts": {
-    "start": "http-server src/static",
+    "start": "yarn build && http-server src/static",
     "build": "NODE_ENV=production webpack -p",
     "test": "mocha test"
   },
@@ -17,22 +17,23 @@
     "react"
   ],
   "author": "\"Skaman Sam\" Tyler",
-  "license": "ISC",
+  "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/skamansam/node-react-todo/issues"
   },
   "homepage": "https://github.com/skamansam/node-react-todo#readme",
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-loader": "^7.1.2",
     "http-server": "^0.11.1",
     "webpack": "^3.10.0"
