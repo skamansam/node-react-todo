@@ -1,17 +1,31 @@
-import React from 'react'
-import { Route, IndexRoute } from 'react-router'
 import Layout from './components/Layout';
-import IndexPage from './components/IndexPage';
-import AthletePage from './components/AthletePage';
+import Lists from './components/Lists';
+import List from './components/List';
+import ListEditor from './components/ListEditor';
 import NotFoundPage from './components/NotFoundPage';
 
-const routes = (
-  <Route path="/" component={Layout}>
-    <IndexRoute component={IndexPage}/>
-    <Route path="lists/:id" component={ListsPage}/>
-    <Route path="lists/:id/edit" component={EditListPage}/>
-    <Route path="*" component={NotFoundPage}/>
-  </Route>
-);
+const routes = [
+  { component: Layout,
+    routes: [
+      { path: '/',
+        exact: true,
+        component: Lists
+      },
+      { path: '/lists/:id/edit',
+        component: ListEditor
+      },
+      { path: '/lists/:id',
+        component: List
+      },
+      { path: '/lists',
+        component: Lists
+      },
+      {
+        path: '*',
+        component: NotFoundPage
+      }
+    ]
+  }
+];
 
 export default routes;
