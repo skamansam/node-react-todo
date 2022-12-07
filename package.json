@@ -22,7 +22,7 @@
   "homepage": "https://github.com/skamansam/node-react-todo#readme",
   "dependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "jest": "^22.3.0",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
